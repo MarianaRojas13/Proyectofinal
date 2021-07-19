@@ -27,7 +27,7 @@
                     </select>
                 </div>
                 <div class="card-footer d-grid gap-1">
-                    <button type="button" class="btn btn-info">Agregar</button>
+                    <button id="registrar-btn" type="button" class="btn btn-info">Agregar</button>
                 </div>
             </div>
         </div>
@@ -35,5 +35,6 @@
 </div>
 @endsection
 @section('javascript')
+    <script src="{{asset('js/servicios/productosService.js')}}"></script>
     <script src="{{asset('js/agregar_producto.js')}}"></script>
 @endsection

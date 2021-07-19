@@ -9,6 +9,7 @@
                         <td>Precio</td>
                         <td>Stock</td>
                         <td>Tipo</td>
+                        <td>Acciones</td>
                     </tr>
                 </thead>
                 <tbody id="tbody-producto">
@@ -17,4 +18,8 @@
             </table>
         </div>
     </div>
+@endsection
+@section('javascript')
+    <script src="{{asset('js/servicios/productosService.js')}}"></script>
+    <script src="{{asset('js/producto_venta.js')}}"></script>
 @endsection

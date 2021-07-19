@@ -9,4 +9,22 @@ const cargarProductos =async()=>{
         tipoSelect.appendChild(option);
     });
 };
-cargarProductos();
+//ejecuta un codigo asegurandoce que todos los recursosos esten cargados antes de ejecutar
+document.addEventListener("DOMContentLoaded",()=>{
+    cargarProductos();
+});
+
+document.querySelector("#registrar-btn").addEventListener("click", async()=>{
+    let nombre= document.querySelector("#nombreP-txt").value;
+    let precio= document.querySelector("#precio-txt").value;
+    let stock=document.querySelector("#stock-txt").value;
+    let tipo=document.querySelector("#tipo-select").value;
+    let producto={};
+    producto.nombre=nombre;
+    producto.precio=precio;
+    producto.stock=stock;
+    producto.tipo=tipo;
+    let res= await crearProductos(producto);
+    await Swal.fire("Producto creado","Producto ingresado","info");
+    window.location.href="producto_venta";
+});

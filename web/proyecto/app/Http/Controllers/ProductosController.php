@@ -17,13 +17,15 @@ class ProductosController extends Controller
     public function getDatosProductos(){/*llama a toda la informacion que se manda y se usa el model */
         $prod=Producto::all();
         return $prod;
-    }
-    public function crearProductos(){
+    }/*el requiest trae los datos del formulario */
+    public function crearProductos(Request $request){
+        $input=$request->all();//se crea un arreglo con todo lo que se mando.
         $producto=new Producto();
-        $producto->nombre="Agenda Profe";
-        $producto->precio=2000;
-        $producto->stock=5;
-        $producto->tipo="Agenda";
+        $producto->nombre=$input["nombre"];
+        $producto->precio=$input["precio"];
+        $producto->stock=$input["stock"];
+        $producto->tipo=$input["tipo"];
         $producto->save();
+        return $producto;
     }
 }
