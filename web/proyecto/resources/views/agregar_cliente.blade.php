@@ -24,10 +24,7 @@
                   <div class="mb-3">
                       <label for="tipo-select" class="form-label">Tipo</label>
                       <select  id="tipo-select" class="form-select">
-                          <option value="Agenda">Agenda</option>
-                          <option value="Album">Album</option>
-                          <option value="Planner">Planner</option>
-                          <option value="Croquera">Croquera</option>
+                          
                       </select>
                   </div>
                   <div class="form-check">
@@ -50,4 +47,7 @@
       </div>
   </div>
 
+@endsection
+@section('javascript')
+    <script src="{{asset('js/agregar_producto.js')}}"></script>
 @endsection

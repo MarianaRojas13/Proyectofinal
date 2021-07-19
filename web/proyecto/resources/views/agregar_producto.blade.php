@@ -18,15 +18,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="stock-txt" class="form-label">Stock</label>
-                    <input type="text" id="stock-txt" class="form-control">
+                    <input type="number" id="stock-txt" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="tipo-select" class="form-label">Tipo</label>
                     <select  id="tipo-select" class="form-select">
-                        <option value="Agenda">Agenda</option>
-                        <option value="Album">Album</option>
-                        <option value="Planner">Planner</option>
-                        <option value="Croquera">Croquera</option>
+
                     </select>
                 </div>
                 <div class="card-footer d-grid gap-1">
@@ -36,4 +33,7 @@
         </div>
     </div>
 </div>
+@endsection
+@section('javascript')
+    <script src="{{asset('js/agregar_producto.js')}}"></script>
 @endsection
