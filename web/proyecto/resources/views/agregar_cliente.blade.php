@@ -39,6 +39,18 @@
                       A Pedido
                     </label>
                   </div>
+                <!--  <div class="mb-3">
+                    <label for="legendario-rb" class="form-label">Legendario</label>
+                    <div class="form-check form-check-inline"> <!-el checked predefine seleccion el si o el no--
+                        <input type="radio" name="legendario-rb" checked id="legendario-si" class="form-check-input">
+                        <label for="legendario-si" class="form-check-label">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="legendario-rb" id="legendario-no" class=" form-check-input">
+                        <label for="legendario-no" class="form-check-label">No</label>
+                    </div>
+                  </div>-->
+
                   <div class="card-footer d-grid gap-1">
                       <button type="button" class="btn btn-info">Agregar</button>
                   </div>

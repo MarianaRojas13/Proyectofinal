@@ -28,4 +28,19 @@ class ProductosController extends Controller
         $producto->save();
         return $producto;
     }
+    public function eliminarProducto(Request $request){
+        $input=$request->all();
+        $id=$input["id"];
+        //eloquent:el administrador de bs de laravel se llama Eloquent
+        $producto= Producto::findOrFail($id);
+        //para eliinar se llama al metodo delete
+        $producto->delete();
+        return "ok";
+    }
+   
+
+
+
+
+
 }

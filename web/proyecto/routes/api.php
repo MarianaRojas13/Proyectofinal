@@ -21,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get("productos/get",[ProductosController::class,"getProductos"]);
 Route::get("datosproductos/get",[ProductosController::class,"getDatosProductos"]);
 Route::post("productos/post",[ProductosController::class,"crearProductos"]);
+Route::post("productos/delete",[ProductosController::class,"eliminarProducto"]);
